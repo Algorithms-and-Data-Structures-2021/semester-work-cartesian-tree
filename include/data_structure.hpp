@@ -6,22 +6,37 @@ namespace itis {
 
   // Tip 1: объявите здесь необходимые структуры, функции, константы и прочее
 
-  // Пример: объявление константы времени компиляции в заголовочном файле
-  inline constexpr auto kStringConstant = "Hello, stranger!";
+  //Объявление класса "Node" и иницилизация переменных
 
-  // Пример: объявление структуры с полями и методами
-  struct MyStructure {
+  struct Node {
+    //поля структуры
+    int key;
+    int prior;
+
+    Node(int _key, int _prior) {
+      this->key = _key;
+      this->prior = _prior;
+    }
+  };
+
+  //Объявление класса "CartesianTrees" и иницилизация переменных
+
+  struct CartesianTree {
    public:
+    //поля структуры
     int size_{0};
-    int capacity_{0};
-    int* data_{nullptr};
+    Node *tree_root{nullptr};
+    Node *left{nullptr};
+    Node *right{nullptr};
 
     // Tip 2: На начальном этапе разработки структуры данных можете определения методов задавать в
     // заголовочном файле, как только работа будет завершена, можно будет оставить здесь только объявления.
+    /**Добавление элемента в дерево
+*
+*/
 
     int size() const {
       return size_;
     }
-  };
-
-}  // namespace itis
+  }
+}
