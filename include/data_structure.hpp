@@ -10,12 +10,18 @@ namespace itis {
 
   struct Node {
     //поля структуры
+   public:
     int key;
     int prior;
+    Node *left;
+      Node *right;
 
-    Node(int _key, int _prior) {
+
+    Node(int _key, int _prior, Node *_left, Node *_right) {
       this->key = _key;
       this->prior = _prior;
+      this->left = _left;
+      this->right = _right;
     }
   };
 
@@ -25,9 +31,12 @@ namespace itis {
    public:
     //поля структуры
     int size_{0};
-    Node *tree_root{nullptr};
-    Node *left{nullptr};
-    Node *right{nullptr};
+
+    CartesianTree *t{nullptr};
+    CartesianTree *t1{nullptr};
+    CartesianTree *t2{nullptr};
+
+
 
     // Tip 2: На начальном этапе разработки структуры данных можете определения методов задавать в
     // заголовочном файле, как только работа будет завершена, можно будет оставить здесь только объявления.
@@ -36,6 +45,7 @@ namespace itis {
 */
 
     int size() const {
+
       return size_;
     }
   }
