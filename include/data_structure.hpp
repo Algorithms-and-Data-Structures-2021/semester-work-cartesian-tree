@@ -14,8 +14,9 @@ namespace itis {
     int key;
     int prior;
     Node *left;
-      Node *right;
+    Node *right;
 
+    //конструктор класса "вершина"
       Node(int _key, int _prior, Node *_left, Node *_right) {
       this->key = _key;
       this->prior = _prior;
@@ -34,23 +35,27 @@ namespace itis {
     CartesianTree *t{nullptr};
     CartesianTree *t1{nullptr};
     CartesianTree *t2{nullptr};
-
+    Node *root{nullptr};
 
 
     // Tip 2: На начальном этапе разработки структуры данных можете определения методов задавать в
     // заголовочном файле, как только работа будет завершена, можно будет оставить здесь только объявления.
-    /**Добавление элемента в дерево
-*
-*/
+
+    void  *split(Node *t, int key, Node *t1, Node *t2);
+    //  void update(Node *t);
+    int get_size(CartesianTree *t);
+
+    Node *merge(Node *t1, Node *t2);
+
+    // метод "Insert" - отвечает за добавление элемента к дереву.
+    void Insert(int new_key,int new_prior);
+
+    // метод "Search" - отвечает за поиска элемента по ключу.
+    Node *Search(int new_key);
 
     int size() const {
-
       return size_;
     }
-     void  *split(Node *t, int key, Node *t1, Node *t2);
-//    void update(Node *t);
-    int get_size(CartesianTree *t);
-    Node *merge(Node *t1, Node *t2);
 
   };
 
