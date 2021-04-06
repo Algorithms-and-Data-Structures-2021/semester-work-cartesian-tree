@@ -16,8 +16,7 @@ namespace itis {
     Node *left;
       Node *right;
 
-
-    Node(int _key, int _prior, Node *_left, Node *_right) {
+      Node(int _key, int _prior, Node *_left, Node *_right) {
       this->key = _key;
       this->prior = _prior;
       this->left = _left;
@@ -48,5 +47,11 @@ namespace itis {
 
       return size_;
     }
-  }
+     void  *split(Node *t, int key, Node *t1, Node *t2);
+//    void update(Node *t);
+    int get_size(CartesianTree *t);
+    Node *merge(Node *t1, Node *t2);
+
+  };
+
 }
