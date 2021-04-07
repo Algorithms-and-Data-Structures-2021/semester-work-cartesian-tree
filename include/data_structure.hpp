@@ -56,6 +56,7 @@ namespace itis {
     int size() const {
       return size_;
     }
+    void *erase(Node *t, int key);
 
   };
 

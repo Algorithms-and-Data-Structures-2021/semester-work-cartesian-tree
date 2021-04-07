@@ -76,5 +76,10 @@ namespace itis {
       return t2;
     }
   }
-
+  void *CartesianTree::erase(Node *t, int key) {
+    if (t->key == key)
+      merge (t->left, t->right);
+    else
+      erase (key < t->key ? t->left : t->right, key);
+  }
 }  // namespace itis
