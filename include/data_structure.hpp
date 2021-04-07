@@ -35,7 +35,7 @@ namespace itis {
     CartesianTree *t{nullptr};
     CartesianTree *t1{nullptr};
     CartesianTree *t2{nullptr};
-    Node *root{nullptr};
+    Node *root_{nullptr};
 
 
     // Tip 2: На начальном этапе разработки структуры данных можете определения методов задавать в

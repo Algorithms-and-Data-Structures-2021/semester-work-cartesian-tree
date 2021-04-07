@@ -8,21 +8,28 @@ namespace itis {
 
   void CartesianTree::Insert(int new_key, int new_prior) {
 
-    Node *current_tree = new Node(new_key, new_prior, nullptr, nullptr);
+    Node *current_node = root_;
 
-    Node *left = current_tree->left;
-    Node *right = current_tree->right;
-
-    split(current_tree, new_key, right, left);
-
-    merge(merge(left, current_tree), right);
-
-    size_++;
+    while (current_node->key != new_key){
+      if (current_node->key > new_key && current_node->left == nullptr){
+        current_node->left = new Node(new_key,new_prior, nullptr, nullptr);
+        size_++;
+      }
+      if(current_node->key < new_prior && current_node->right == nullptr){
+        current_node->right = new Node(new_key,new_prior, nullptr, nullptr);
+        size_++;
+      }
+      if (current_node->key > new_key){
+        current_node = current_node->left;
+      }else{
+        current_node = current_node->right;
+      }
+    }
   }
 
   Node *CartesianTree::Search(int new_key) {
 
-    Node *current_node = root;
+    Node *current_node = root_;
 
     while (current_node->key != new_key) {
       if (new_key < current_node->key) {
