@@ -8,6 +8,14 @@ namespace itis {
 
   void CartesianTree::Insert(int new_key, int new_prior) {
 
+
+
+    if(size_==0){
+      auto *node = new Node(new_key,new_prior, nullptr, nullptr);
+      root_ = node;
+      size_++;
+    }
+
     Node *current_node = root_;
 
     while (current_node->key != new_key){
@@ -15,13 +23,13 @@ namespace itis {
         current_node->left = new Node(new_key,new_prior, nullptr, nullptr);
         size_++;
       }
-      if(current_node->key < new_prior && current_node->right == nullptr){
+      if(current_node->key < new_key && current_node->right == nullptr){
         current_node->right = new Node(new_key,new_prior, nullptr, nullptr);
         size_++;
       }
       if (current_node->key > new_key){
         current_node = current_node->left;
-      }else{
+      } else{
         current_node = current_node->right;
       }
     }
@@ -47,13 +55,13 @@ namespace itis {
   //    t->size()=1+get_size()
   //  }
 
-  int CartesianTree::get_size(CartesianTree *t) {
-    if (t == nullptr) {
+  int CartesianTree::get_size(CartesianTree *tree) {
+    if (tree == nullptr) {
       return 0;
     }
-    return t->size();
-  }
-
+    return tree->size();
+    }
+  /*
   void *CartesianTree::split(Node *t, int key, Node *t1, Node *t2) {
     if (t == nullptr) {
       t1 = t2 = nullptr;
@@ -83,10 +91,12 @@ namespace itis {
       return t2;
     }
   }
+
   void *CartesianTree::erase(Node *t, int key) {
     if (t->key == key)
       merge (t->left, t->right);
     else
       erase (key < t->key ? t->left : t->right, key);
   }
+   */
 }  // namespace itis

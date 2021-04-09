@@ -42,8 +42,8 @@ namespace itis {
     // заголовочном файле, как только работа будет завершена, можно будет оставить здесь только объявления.
 
     void  *split(Node *t, int key, Node *t1, Node *t2);
-    //  void update(Node *t);
-    int get_size(CartesianTree *t);
+    //  void update(Node *tree);
+    int get_size(CartesianTree *tree);
 
     Node *merge(Node *t1, Node *t2);
 
