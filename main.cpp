@@ -16,6 +16,10 @@ int main() {
   auto *node1 = new itis::Node(3,72, nullptr, nullptr);
 
   auto *cartesianTree = new itis::CartesianTree;
+  auto *cartesianTreeA= new itis::CartesianTree;
+  auto *cartesianTreeB= new itis::CartesianTree;
+  cout<<cartesianTreeA->root_<<" "<<cartesianTreeB->root_<<endl;
+
 
 
   cartesianTree->Insert(node1->key,node1->prior);
@@ -30,7 +34,17 @@ int main() {
 
 
 
+ // cartesianTree->split(cartesianTree->root_,5,cartesianTreeA->root_,cartesianTreeB->root_);
+         //проверка split прошла успешно
 
+//cartesianTree->merge(cartesianTreeA->root_,cartesianTreeB->root_);
+         //проверка merge прошла успешно
+
+
+//  cartesianTree->set_size(cartesianTree->root_);
+         //проверка set_size прошла успешно
+
+   cartesianTree->erase(node1,1);
 
   return cartesianTree->get_size(cartesianTree);
 }

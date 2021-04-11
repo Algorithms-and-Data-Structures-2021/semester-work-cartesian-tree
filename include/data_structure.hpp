@@ -41,8 +41,13 @@ namespace itis {
     // Tip 2: На начальном этапе разработки структуры данных можете определения методов задавать в
     // заголовочном файле, как только работа будет завершена, можно будет оставить здесь только объявления.
 
-    void  *split(Node *t, int key, Node *t1, Node *t2);
-    //  void update(Node *tree);
+    void  *split(Node *tt, int key, Node *&t1, Node *&t2);
+
+
+    int  set_size(Node *node);
+
+
+
     int get_size(CartesianTree *tree);
 
     Node *merge(Node *t1, Node *t2);

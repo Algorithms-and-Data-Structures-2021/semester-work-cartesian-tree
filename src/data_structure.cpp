@@ -1,5 +1,5 @@
 #include "data_structure.hpp"
-
+#include "iostream"
 // файл с определениями
 
 namespace itis {
@@ -61,20 +61,46 @@ namespace itis {
     }
     return tree->size();
     }
-  /*
-  void *CartesianTree::split(Node *t, int key, Node *t1, Node *t2) {
-    if (t == nullptr) {
-      t1 = t2 = nullptr;
-      return t1, t2;
+
+
+
+
+  void *CartesianTree::split(Node *tt, int key, Node *&tt1, Node *&t2) {
+    if (tt == nullptr) {
+      tt1 = t2 = nullptr;
+
+      return tt1, t2;
     }
-    if (t->key < key) {
-      split(t->right, key, t->right, t2);
-      t1 = t;
+    if (tt->key < key) {
+      split(tt->right, key, tt->right, t2);
+      tt1 = tt;
     } else {
-      split(t->left, key, t1, t->left);
-      t2 = t;
+      split(tt->left, key, tt1, tt->left);
+      t2 = tt;
     }
+
   }
+  int CartesianTree::set_size(Node *node) {
+
+    if (node== nullptr){
+      return 0;
+    } else{
+      return (set_size(node->left)+1+set_size(node->right));
+    }
+//    int size=0;
+//    if (node->left!= nullptr){
+//      set_size(node->left);
+//      size=size+1;
+//    }
+//    if (node->right!= nullptr){
+//      set_size(node->right);
+//      size=size+1;
+//    }
+//
+//    return size;
+  }
+
+
   Node *CartesianTree::merge(Node *t1, Node *t2) {
     if (t1 == nullptr) {
       return t2;
@@ -92,11 +118,22 @@ namespace itis {
     }
   }
 
+
+
   void *CartesianTree::erase(Node *t, int key) {
-    if (t->key == key)
-      merge (t->left, t->right);
-    else
-      erase (key < t->key ? t->left : t->right, key);
+   Node *less, *equal, *greater;
+   split(root_,key,less,greater);
+   split(greater,key+1,equal,greater);
+   merge(less,greater);
   }
-   */
+
+
+
+//  void *CartesianTree::erase(Node *t, int key) {
+//    if (t->key == key)
+//      merge (t->left, t->right);
+//    else
+//      erase (key < t->key ? t->left : t->right, key);
+//  }
+
 }  // namespace itis
