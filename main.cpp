@@ -44,7 +44,7 @@ int main() {
 //  cartesianTree->set_size(cartesianTree->root_);
          //проверка set_size прошла успешно
 
-   cartesianTree->erase(node1,1);
+ //  cartesianTree->erase(node1,1);
 
   return cartesianTree->get_size(cartesianTree);
 }
