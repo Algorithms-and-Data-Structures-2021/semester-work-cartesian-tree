@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 
   //Проверка декартового дерева...
-  const auto time_point_before = chrono::high_resolution_clock::now();
+  const auto time_point_before = std::chrono::steady_clock::now();
 
 
 
@@ -46,11 +46,14 @@ int main() {
   cartesianTree->Insert(node5->key,node5->prior);
   cartesianTree->Insert(node6->key,node6->prior);
   cartesianTree->Insert(node7->key,node7->prior);
+  cartesianTree->Insert(node8->key,node8->prior);
+  cartesianTree->Insert(node9->key,node9->prior);
+  cartesianTree->Insert(node10->key,node10->prior);
 
 //  cartesianTree->Search(5);
 //  cartesianTree->erase(node1,5);
 
-  const auto time_point_after = chrono::high_resolution_clock::now();
+  const auto time_point_after = std::chrono::steady_clock::now();
 
   // переводим время в наносекунды
   const auto time_diff = time_point_after - time_point_before;
@@ -71,7 +74,7 @@ int main() {
 //  cartesianTree->set_size(cartesianTree->root_);
          //проверка set_size прошла успешно
 
-  cartesianTree->erase(node1,1);
+//  cartesianTree->erase(node1,1);
 
  //return cartesianTree->get_size(cartesianTree);
 }
