@@ -1,7 +1,7 @@
 #include <iostream>
 #include "data_structure.hpp"
-
-
+#include <ctime>
+#include <chrono>
 using namespace std;
 
 int main() {
@@ -18,7 +18,9 @@ int main() {
   auto *cartesianTree = new itis::CartesianTree;
   auto *cartesianTreeA= new itis::CartesianTree;
   auto *cartesianTreeB= new itis::CartesianTree;
-  cout<<cartesianTreeA->root_<<" "<<cartesianTreeB->root_<<endl;
+
+
+//  cout<<cartesianTreeA->root_<<" "<<cartesianTreeB->root_<<endl;
 
 
 
@@ -30,9 +32,18 @@ int main() {
   cartesianTree->Insert(node6->key,node6->prior);
   cartesianTree->Insert(node7->key,node7->prior);
 
+  cartesianTree->Search(5);
+
+  const auto time_point_after = chrono::high_resolution_clock::now();
+
+  // переводим время в наносекунды
+  const auto time_diff = time_point_after - time_point_before;
+  const long time_elapsed_ns = chrono::duration_cast<chrono::nanoseconds>(time_diff).count();
+
+  cout << "Time elapsed (ns): " << time_elapsed_ns << '\n';
   //Проверка прошла успешна на 2-ух методах "Insert" и "Search".
 
-
+  return 0;
 
  // cartesianTree->split(cartesianTree->root_,5,cartesianTreeA->root_,cartesianTreeB->root_);
          //проверка split прошла успешно
@@ -44,7 +55,7 @@ int main() {
 //  cartesianTree->set_size(cartesianTree->root_);
          //проверка set_size прошла успешно
 
- //  cartesianTree->erase(node1,1);
+  cartesianTree->erase(node1,1);
 
-  return cartesianTree->get_size(cartesianTree);
+ //return cartesianTree->get_size(cartesianTree);
 }

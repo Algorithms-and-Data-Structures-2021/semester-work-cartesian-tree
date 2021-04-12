@@ -53,6 +53,13 @@ int main(int argc, char **argv) {
 
   const auto time_point_before = chrono::high_resolution_clock::now();
 
+
+  int k=0;
+  for (int i=0; i<1000000;i++){
+    k=k+1;
+  }
+cout<<k<<endl;
+
   // здесь находится участок кода, время которого необходимо замерить
 
   const auto time_point_after = chrono::high_resolution_clock::now();
