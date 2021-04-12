@@ -9,11 +9,15 @@ int main() {
   //Проверка декартового дерева...
   const auto time_point_before = chrono::high_resolution_clock::now();
 
+
+
 //  int k=0;
-//  for (int i=0; i<1000000;i++){
+//  for (int i=0; i<1;i++){
 //    k=k+1;
 //  }
 //  cout<<k<<endl;
+//
+
 
   auto *node10 = new itis::Node(10,56, nullptr,nullptr);
   auto *node9 = new itis::Node(9,44, nullptr,nullptr);
@@ -43,7 +47,8 @@ int main() {
   cartesianTree->Insert(node6->key,node6->prior);
   cartesianTree->Insert(node7->key,node7->prior);
 
-  cartesianTree->Search(5);
+//  cartesianTree->Search(5);
+//  cartesianTree->erase(node1,5);
 
   const auto time_point_after = chrono::high_resolution_clock::now();
 
