@@ -8,8 +8,6 @@ namespace itis {
 
   void CartesianTree::Insert(int new_key, int new_prior) {
 
-
-
     if(size_==0){
       auto *node = new Node(new_key,new_prior, nullptr, nullptr);
       root_ = node;

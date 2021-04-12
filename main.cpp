@@ -7,6 +7,17 @@ using namespace std;
 int main() {
 
   //Проверка декартового дерева...
+  const auto time_point_before = chrono::high_resolution_clock::now();
+
+//  int k=0;
+//  for (int i=0; i<1000000;i++){
+//    k=k+1;
+//  }
+//  cout<<k<<endl;
+
+  auto *node10 = new itis::Node(10,56, nullptr,nullptr);
+  auto *node9 = new itis::Node(9,44, nullptr,nullptr);
+  auto *node8 = new itis::Node(8,28, nullptr,nullptr);
   auto *node7 = new itis::Node(7,38, nullptr,nullptr);
   auto *node6 = new itis::Node(4,25, nullptr,nullptr);
   auto *node5 = new itis::Node(5,45, nullptr,nullptr);
