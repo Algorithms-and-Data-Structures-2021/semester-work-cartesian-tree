@@ -10,6 +10,8 @@
 #include "vector"
 
 using namespace std;
+
+
 vector<int> split(const string& s, char delimiter) {
   vector<int> tokens;
   string token;
@@ -20,10 +22,10 @@ vector<int> split(const string& s, char delimiter) {
   return tokens;
 }
 int main() {
-    string path="C:\\Repos\\01.csv";
-    ifstream fin;
-    fin.open(path);
-  string result;
+  string path = "C:\\Users\\RAMIL\\Desktop\\datasettest\\split\\01.csv";
+  ifstream fin;
+  fin.open(path);
+
   string line;
   vector<int> intValues;
     if (!fin.is_open()){
