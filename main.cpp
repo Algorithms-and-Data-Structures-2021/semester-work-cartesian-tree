@@ -21,6 +21,8 @@ vector<int> split(const string& s, char delimiter) {
   }
   return tokens;
 }
+
+
 int main() {
   string path = "C:\\Users\\RAMIL\\Desktop\\datasettest\\split\\01.csv";
   ifstream fin;
@@ -28,91 +30,117 @@ int main() {
 
   string line;
   vector<int> intValues;
-    if (!fin.is_open()){
-      cout<< "FUUCK" <<endl;
+  if (!fin.is_open()) {
+    cout << "Error" << endl;
 
-    } else{
+  } else {
 
-      while (getline(fin, line)) {
+    while (getline(fin, line)) {
 
-         intValues = split(line, ',');  // splitting by delimiter and creating vector with int values
+      intValues = split(line, ',');  // splitting by delimiter and creating vector with int values
 
-//        for (int i = 0; i < intValues.size(); ++i) {
-//          cout << intValues[i] << endl;
-//        }
+        //     for (int i = 0; i < intValues.size(); ++i) {
+         //      cout << intValues[i] << endl;
+          //    }
 
-        result = to_string(intValues.size()) + ",";  // amount of elements. "," - delimiter
-      }
-        double  start_time =  clock();
-        //Здесь писать код, который нужно замерить
+    //  result = to_string(intValues.size()) + ",";  // amount of elements. "," - delimiter
+    }
 
+    //const auto time_point_before = std::chrono::steady_clock::now();
+    //Здесь писать код, который нужно замерить
 
+    auto* cartesianTree = new itis::CartesianTree;
 
+    vector<itis::Node> NodeValues;
 
+    for (int i; i < intValues.size()-1;i++){
 
-        double  end_time=clock();
-
-
-
-        const auto process_duration =end_time-start_time;
-
-  cout << "Time elapsed (milliseconds): " << process_duration << '\n';
-
-
-      }
-
-    fin.close();
-
-
-
-
-
-
-
-
-
-
+     NodeValues[i]= *new itis::Node(i,i+1, nullptr,nullptr);
+    }
+    const auto time_point_before = std::chrono::steady_clock::now();
+    for(itis::Node node: NodeValues){
+     cartesianTree->Insert(node.key,node.prior);
+    }
+    auto *node8 = new itis::Node(8,28, nullptr,nullptr);
+    auto *node9 = new itis::Node(12,45, nullptr,nullptr);
+    cartesianTree->Insert(node8->key,node8->prior);
+    cartesianTree->Insert(node9->key,node9->prior);
+// long startTime = clock();
+    auto *cartesianTreeA= new itis::CartesianTree;
+  auto *cartesianTreeB= new itis::CartesianTree;
+    int i=rand()% 300 -1;
+    int j=rand()% 5000000 -1;
+    cartesianTree->split(node8,i,cartesianTreeA->root_,cartesianTreeB->root_);
+      cartesianTree->merge(node8,node9);
 
 
 
+    long endTime = clock();
+
+  //  long result;
+   // result=endTime-startTime;
+
+ //   cout<<result<<endl;
+
+    const auto time_point_after = std::chrono::steady_clock::now();
+
+    const auto time_diff = time_point_after - time_point_before;
+    const long time_elapsed_ns = chrono::duration_cast<chrono::nanoseconds>(time_diff).count();
+
+    cout << "Time elapsed (ns): " << time_elapsed_ns << '\n';
+  }
+
+  fin.close();
+  return 0;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  //Проверка декартового дерева...
-//  const auto time_point_before = std::chrono::steady_clock::now();
 //
 //
 //
-////  int k=0;
-////  for (int i=0; i<1;i++){
-////    k=k+1;
-////  }
-////  cout<<k<<endl;
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+////  //Проверка декартового дерева...
+////  const auto time_point_before = std::chrono::steady_clock::now();
 ////
-//
-//
-//  auto *node10 = new itis::Node(10,56, nullptr,nullptr);
-//  auto *node9 = new itis::Node(9,44, nullptr,nullptr);
+////
+////
+//////  int k=0;
+//////  for (int i=0; i<1;i++){
+//////    k=k+1;
+//////  }
+//////  cout<<k<<endl;
+//////
+////
+////
+////  auto *node10 = new itis::Node(10,56, nullptr,nullptr);
+////  auto *node9 = new itis::Node(9,44, nullptr,nullptr);
 //  auto *node8 = new itis::Node(8,28, nullptr,nullptr);
 //  auto *node7 = new itis::Node(7,38, nullptr,nullptr);
 //  auto *node6 = new itis::Node(4,25, nullptr,nullptr);
@@ -154,7 +182,7 @@ int main() {
 //  cout << "Time elapsed (ns): " << time_elapsed_ns << '\n';
 //  //Проверка прошла успешна на 2-ух методах "Insert" и "Search".
 
-  return 0;
+
 
  // cartesianTree->split(cartesianTree->root_,5,cartesianTreeA->root_,cartesianTreeB->root_);
          //проверка split прошла успешно
@@ -169,4 +197,3 @@ int main() {
 //  cartesianTree->erase(node1,1);
 
  //return cartesianTree->get_size(cartesianTree);
-}

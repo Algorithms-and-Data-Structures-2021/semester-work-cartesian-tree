@@ -9,22 +9,21 @@ public class DatasetGenerator {
 
 
 
-
-
 ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
 ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
 ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
-
-
-
-
 
 
 
 */
 
+
+
 String[] name={"/insert","/search","/split","/merge","/erase"};
 String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/data";
+
+
+
 // path=path+"/data";
 //String[] name={"\\insert","\\search","\\split","\\merge","\\erase"};
 //String path="H:\\Загрузки\\javatest1-master\\src\\com\\company\\Graph11\\Graph\\src\\com\\company\\Others";
