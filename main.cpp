@@ -24,7 +24,7 @@ vector<int> split(const string& s, char delimiter) {
 
 
 int main() {
-  string path = "/Users/user/IdeaProjects/Graph56/Graph/src/com/company/Others/data/erase/12.csv";
+  string path = "/Users/user/IdeaProjects/Graph56/Graph/src/com/company/Others/data/erase/06.csv";
   ifstream fin;
   fin.open(path);
 
@@ -70,8 +70,9 @@ int main() {
     const auto time_point_after = std::chrono::steady_clock::now();
 
     const auto time_diff = time_point_after - time_point_before;
+    const long time_elapsed_mks = chrono::duration_cast<chrono::microseconds>(time_diff).count();
     const long time_elapsed_ns = chrono::duration_cast<chrono::nanoseconds>(time_diff).count();
-
+    cout << "Time elapsed (mks): " << time_elapsed_mks << '\n';
     cout << "Time elapsed (ns): " << time_elapsed_ns << '\n';
   }
 
