@@ -24,7 +24,7 @@ vector<int> split(const string& s, char delimiter) {
 
 
 int main() {
-  string path = "C:\\Users\\RAMIL\\Desktop\\datasettest\\split\\01.csv";
+  string path = "/Users/user/IdeaProjects/Graph56/Graph/src/com/company/Others/data/erase/12.csv";
   ifstream fin;
   fin.open(path);
 
@@ -34,53 +34,38 @@ int main() {
     cout << "Error" << endl;
 
   } else {
-
+    cout << "yep" << endl;
     while (getline(fin, line)) {
 
       intValues = split(line, ',');  // splitting by delimiter and creating vector with int values
 
-        //     for (int i = 0; i < intValues.size(); ++i) {
-         //      cout << intValues[i] << endl;
-          //    }
+//             for (int i = 0; i < intValues.size(); ++i) {
+//               cout << intValues[static_cast<unsigned long>(i)] << endl;
+//              }
 
-    //  result = to_string(intValues.size()) + ",";  // amount of elements. "," - delimiter
+
+      //  result = to_string(intValues.size()) + ",";  // amount of elements. "," - delimiter
+
     }
 
-    //const auto time_point_before = std::chrono::steady_clock::now();
-    //Здесь писать код, который нужно замерить
 
-    auto* cartesianTree = new itis::CartesianTree;
+    const auto time_point_before = std::chrono::steady_clock::now();
 
+
+//int k=0;
+//    for (int i = 0; i <10000012 ; ++i) {
+//      k=k+1;
+//    }
     vector<itis::Node> NodeValues;
 
-    for (int i; i < intValues.size()-1;i++){
-
-     NodeValues[i]= *new itis::Node(i,i+1, nullptr,nullptr);
+    for (unsigned long i = 0; i < intValues.size(); ++i) {
+      NodeValues.push_back(*new itis::Node(intValues[static_cast<unsigned long>(rand() % 99 + 1)],intValues[static_cast<unsigned long>(rand() % 99 + 1)], nullptr, nullptr) );
     }
-    const auto time_point_before = std::chrono::steady_clock::now();
+    auto *cartesianTree= new itis::CartesianTree;
+
     for(itis::Node node: NodeValues){
-     cartesianTree->Insert(node.key,node.prior);
+      cartesianTree->Insert(node.key,node.prior);
     }
-    auto *node8 = new itis::Node(8,28, nullptr,nullptr);
-    auto *node9 = new itis::Node(12,45, nullptr,nullptr);
-    cartesianTree->Insert(node8->key,node8->prior);
-    cartesianTree->Insert(node9->key,node9->prior);
-// long startTime = clock();
-    auto *cartesianTreeA= new itis::CartesianTree;
-  auto *cartesianTreeB= new itis::CartesianTree;
-    int i=rand()% 300 -1;
-    int j=rand()% 5000000 -1;
-    cartesianTree->split(node8,i,cartesianTreeA->root_,cartesianTreeB->root_);
-      cartesianTree->merge(node8,node9);
-
-
-
-    long endTime = clock();
-
-  //  long result;
-   // result=endTime-startTime;
-
- //   cout<<result<<endl;
 
     const auto time_point_after = std::chrono::steady_clock::now();
 
