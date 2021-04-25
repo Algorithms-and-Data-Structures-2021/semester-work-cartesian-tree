@@ -6,6 +6,8 @@
 
 `Actions > CMake > ... > Create status badge`
 
+[Наша папка на гугл диске](https://drive.google.com/drive/folders/1A01XumxrWELLVbNP_Sq-Tcs-M1O4V5Ne)
+ 
 _Краткое описание семестрового проекта. Следует отразить информацию по следующим пунктам:_
 
 - _Какая структура данных реализуется?_
