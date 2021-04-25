@@ -187,9 +187,9 @@ dataset/data/
 
 _Список использованных при реализации структуры данных источников._
 
-[https://habr.com/ru](https://habr.com/ru/post/101818/);
-[https://neerc.ifmo.ru](https://neerc.ifmo.ru/wiki/index.php?title=Декартово_дерево);
-[https://www.youtube.com](https://www.youtube.com/watch?v=68mMGJl5F8s&t=728s&ab_channel=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%B4%D0%BD%D0%BE%D0%B5%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%B2%D0%A3%D0%BB%D0%93%D0%A2%D0%A3);
-[http://opentrains.mipt.ru](http://opentrains.mipt.ru/zksh/files/zksh2015/lectures/zksh_cartesian.pdf);
+1.[https://habr.com/ru](https://habr.com/ru/post/101818/)(реализация декартового дерева на языке java)
+2.[https://neerc.ifmo.ru](https://neerc.ifmo.ru/wiki/index.php?title=Декартово_дерево) (вики-статья)
+3.[https://www.youtube.com](https://www.youtube.com/watch?v=68mMGJl5F8s&t=728s&ab_channel=%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B0%D0%B4%D0%BD%D0%BE%D0%B5%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%B2%D0%A3%D0%BB%D0%93%D0%A2%D0%A3)(понятное объяснение принципа работы декартового дерева
+4.[http://opentrains.mipt.ru](http://opentrains.mipt.ru/zksh/files/zksh2015/lectures/zksh_cartesian.pdf) 
 
 _**Это не плагиат, это уважение чужого труда и помощь своим сокурсникам более подробно разобраться в теме.**_
