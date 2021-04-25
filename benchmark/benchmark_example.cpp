@@ -23,7 +23,8 @@ vector<int> split(const string& s, char delimiter) {
 }
 
 
-int main() {
+int benchmark() {
+  cout<<"ss"<<endl;
   //
   ////ИЗМЕНИТЬ ПУТЬ К НАБОРАМ ДАННЫХ
   //
