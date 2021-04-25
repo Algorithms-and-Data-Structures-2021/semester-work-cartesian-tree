@@ -78,8 +78,8 @@ int benchmark() {
       auto *cartesianTree = new itis::CartesianTree;
 
 
-    auto *cartesianTreeA = new itis::CartesianTree;
-    auto *cartesianTreeB = new itis::CartesianTree;
+//    auto *cartesianTreeA = new itis::CartesianTree; Пустое дерево для операции split. Убрать слеши при использовании split!!!
+//    auto *cartesianTreeB = new itis::CartesianTree; Пустое дерево для операции split  Убрать слеши при использовании split!!!
 
    //// cartesianTree->split(cartesianTree->root_, rand() % (смотреть строку 63)+ 1, cartesianTreeA->root_, cartesianTreeB->root_);
    /// Разделение дерева на два для операции merge
@@ -129,7 +129,7 @@ int benchmark() {
         const auto time_diff = time_point_after - time_point_before;
 
 
-        const long time_elapsed_ns = chrono::duration_cast<chrono::nanoseconds>(time_diff).count();
+        const  long long time_elapsed_ns = chrono::duration_cast<chrono::nanoseconds>(time_diff).count();
 
 
         cout << "Time elapsed (ns): " << time_elapsed_ns << '\n';
