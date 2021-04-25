@@ -1,54 +1,68 @@
-package com.company;
+package com.company.Others;
+
+import javafx.scene.effect.Reflection;
 
 import java.io.*;
 
 public class DatasetGenerator {
 
     public static void main(String[] args) throws Exception {
+    /*
 
 
 
 
 
-   /*
+ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
+ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
+ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
 
 
 
-ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ !!
-ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ !!
-ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ !!
+
 
 
 
 */
 
-
-
+//String[] name={"/insert","/search","/split","/merge","/erase"};
+//String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/data";
+// path=path+"/data";
 String[] name={"\\insert","\\search","\\split","\\merge","\\erase"};
+String[] name2={"\\pack1","\\pack2","\\pack3","\\pack4","\\pack5","\\pack6","\\pack7","\\pack8","\\pack9","\\pack10"};
 String path="H:\\Загрузки\\javatest1-master\\src\\com\\company\\Graph11\\Graph\\src\\com\\company";
 path=path+"\\data";
 
  File file= new File(path);
  file.mkdir();
+
+
  int h=0;
 
         for (int i = 0; i < name.length ; i++) {
 
             File dir1= new File(path+name[i]);
             dir1.mkdir();
+            String path2= dir1.getAbsolutePath();
+            for (int j = 0; j < name2.length ; j++) {
+                File dir2= new File(path2+name2[j]);
+                System.out.println(dir2.getAbsolutePath());
+                dir2.mkdir();
 
-            pack01(path+name[i]);
-            pack02(path+name[i]);
-            pack03(path+name[i]);
-            pack04(path+name[i]);
-            pack05(path+name[i]);
-            pack06(path+name[i]);
-            pack07(path+name[i]);
-            pack08(path+name[i]);
-            pack09(path+name[i]);
-            pack10(path+name[i]);
-            pack11(path+name[i]);
-            pack12(path+name[i]);
+                pack01(path + name[i]+name2[j]);
+                pack02(path + name[i]+name2[j]);
+                pack03(path + name[i]+name2[j]);
+                pack04(path + name[i]+name2[j]);
+                pack05(path + name[i]+name2[j]);
+                pack06(path + name[i]+name2[j]);
+                pack07(path + name[i]+name2[j]);
+                pack08(path + name[i]+name2[j]);
+                pack09(path + name[i]+name2[j]);
+                pack10(path + name[i]+name2[j]);
+                pack11(path + name[i]+name2[j]);
+                pack12(path + name[i]+name2[j]);
+
+            }
 
         }
  //String path="/Users/user/IdeaProjects/Graph56/Graph/src/com/company/Others";
@@ -68,18 +82,18 @@ path=path+"\\data";
     }
     static void pack01(String path) throws Exception{
 
-        //File file= new File(path+"\\01.csv");
-        File file= new File(path+"/01.csv");
+        File file= new File(path+"\\01.csv");
+       // File file= new File(path+"/01.csv");
             file.createNewFile();
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <10 ; i++) {
-            for (int j = 0; j <10 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+        for (int i = 0; i <100 ; i++) {
 
-            }
-            writer.append("\n");
+                writer.write((int) (1+ Math.random()*1000000)+",");
+
+
+
         }
         writer.flush();
         writer.close();
@@ -94,12 +108,11 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <50 ; i++) {
-            for (int j = 0; j <10 ; j++) {
+        for (int i = 0; i <500 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
         }
         writer.flush();
         writer.close();
@@ -112,12 +125,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <100 ; i++) {
-            for (int j = 0; j <10 ; j++) {
+        for (int i = 0; i <1000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
@@ -132,12 +145,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <50 ; i++) {
-            for (int j = 0; j <100 ; j++) {
+        for (int i = 0; i <5000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
@@ -151,12 +164,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <100 ; i++) {
-            for (int j = 0; j <100 ; j++) {
+        for (int i = 0; i <1000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
@@ -170,12 +183,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <100 ; i++) {
-            for (int j = 0; j <250 ; j++) {
+        for (int i = 0; i <25000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
@@ -189,12 +202,10 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <500 ; i++) {
-            for (int j = 0; j <100 ; j++) {
+        for (int i = 0; i <50000 ; i++) {
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
         }
         writer.flush();
         writer.close();
@@ -207,12 +218,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <100 ; i++) {
-            for (int j = 0; j <1000 ; j++) {
+        for (int i = 0; i <100000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
@@ -228,12 +239,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <1000 ; i++) {
-            for (int j = 0; j <500 ; j++) {
+        for (int i = 0; i <500000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
@@ -248,12 +259,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <1000 ; i++) {
-            for (int j = 0; j <1000 ; j++) {
+        for (int i = 0; i <1000000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
@@ -269,12 +280,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <2500 ; i++) {
-            for (int j = 0; j <1000 ; j++) {
+        for (int i = 0; i <2500000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
@@ -288,12 +299,12 @@ path=path+"\\data";
 
         FileWriter writer= new FileWriter(file);
 
-        for (int i = 0; i <5000 ; i++) {
-            for (int j = 0; j <1000 ; j++) {
+        for (int i = 0; i <5000000 ; i++) {
+
                 writer.write((int) (1+ Math.random()*1000000)+",");
 
-            }
-            writer.append("\n");
+
+
         }
         writer.flush();
         writer.close();
