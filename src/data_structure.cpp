@@ -14,6 +14,8 @@ namespace itis {
       size_++;
     }
 
+
+
     Node *current_node = root_;
 
     while (current_node->key != new_key){
@@ -33,6 +35,8 @@ namespace itis {
     }
   }
 
+
+
   Node *CartesianTree::Search(int new_key) {
 
     Node *current_node = root_;
@@ -48,10 +52,7 @@ namespace itis {
     return current_node;
   }
 
-  //  void CartesianTree::update(Node *t) {
-  //    Node *node;
-  //    t->size()=1+get_size()
-  //  }
+
 
   int CartesianTree::get_size(CartesianTree *tree) {
     if (tree == nullptr) {
@@ -85,17 +86,8 @@ namespace itis {
     } else{
       return (set_size(node->left)+1+set_size(node->right));
     }
-//    int size=0;
-//    if (node->left!= nullptr){
-//      set_size(node->left);
-//      size=size+1;
-//    }
-//    if (node->right!= nullptr){
-//      set_size(node->right);
-//      size=size+1;
-//    }
-//
-//    return size;
+
+
   }
 
 
@@ -127,11 +119,5 @@ namespace itis {
 
 
 
-//  void *CartesianTree::erase(Node *t, int key) {
-//    if (t->key == key)
-//      merge (t->left, t->right);
-//    else
-//      erase (key < t->key ? t->left : t->right, key);
-//  }
 
-}  // namespace itis
+}

@@ -5,13 +5,18 @@ import java.io.*;
 public class DatasetGenerator {
 
     public static void main(String[] args) throws Exception {
-    /*
 
 
 
-ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
-ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
-ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ ДЛЯ СВОЕЙ ОС!!
+
+
+   /*
+
+
+
+ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ !!
+ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ !!
+ВАЖНО!!! ПОМЕНЯТЬ ПУТЬ !!
 
 
 
@@ -19,20 +24,12 @@ public class DatasetGenerator {
 
 
 
-String[] name={"/insert","/search","/split","/merge","/erase"};
-String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/data";
+String[] name={"\\insert","\\search","\\split","\\merge","\\erase"};
+String path="H:\\Загрузки\\javatest1-master\\src\\com\\company\\Graph11\\Graph\\src\\com\\company";
+path=path+"\\data";
 
-
-
-// path=path+"/data";
-//String[] name={"\\insert","\\search","\\split","\\merge","\\erase"};
-//String path="H:\\Загрузки\\javatest1-master\\src\\com\\company\\Graph11\\Graph\\src\\com\\company\\Others";
-//path=path+"\\data";
-
-// File file= new File(path);
-// file.mkdir();
-
-
+ File file= new File(path);
+ file.mkdir();
  int h=0;
 
         for (int i = 0; i < name.length ; i++) {
@@ -99,7 +96,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <50 ; i++) {
             for (int j = 0; j <10 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -117,7 +114,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <100 ; i++) {
             for (int j = 0; j <10 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -137,7 +134,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <50 ; i++) {
             for (int j = 0; j <100 ; j++) {
-                writer.write((int) (1+ Math.random()*100)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -156,7 +153,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <100 ; i++) {
             for (int j = 0; j <100 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -175,7 +172,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <100 ; i++) {
             for (int j = 0; j <250 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -194,7 +191,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <500 ; i++) {
             for (int j = 0; j <100 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -212,7 +209,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <100 ; i++) {
             for (int j = 0; j <1000 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -233,7 +230,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <1000 ; i++) {
             for (int j = 0; j <500 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -253,7 +250,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <1000 ; i++) {
             for (int j = 0; j <1000 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -274,7 +271,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <2500 ; i++) {
             for (int j = 0; j <1000 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
@@ -293,7 +290,7 @@ String path="/Users/user/CLionProjects/semester-work-cartesian-treeh/dataset/dat
 
         for (int i = 0; i <5000 ; i++) {
             for (int j = 0; j <1000 ; j++) {
-                writer.write((int) (1+ Math.random()*300)+",");
+                writer.write((int) (1+ Math.random()*1000000)+",");
 
             }
             writer.append("\n");
