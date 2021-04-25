@@ -114,32 +114,30 @@ cd dataset
 [`dataset/data/dataset-example.csv`](dataset/data/dataset-example.csv)):
 
 ```csv
-id, full_name
-0, "Ramil Safin"
-1, "Bulat Abbyasov"
+946454	106098	40486	63289	916488	831323	541594	559466	428651	777783
 ...
 ```
 
-**Примечание**. Для удобства запуска контрольных тестов рекомендуется организовывать данные в директориях, например:
+**Расположение файлов в папке data:**
 
 ```shell
 dataset/data/
-  add/
-    01/
-      100.csv
-      ...
-      5000000.csv
-    02/ ...
-    03/ ...
-    ...
-    10/ ...
+  split/
+        /pack1
+            01.csv
+              ...
+            12.csv
+        /pack2
+        ......
+        /pack12
   search/
-    01/
-      100.csv
-      ...
-      5000000.csv
-    ...
-    10/ ...
+       /pack1
+            01.csv
+              ...
+            12.csv
+        /pack2
+        ......
+        /pack12
   ...
 ```
 
