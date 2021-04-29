@@ -24,14 +24,14 @@ vector<int> split(const string& s, char delimiter) {
 
 
 int main() {
-  cout<<"ss"<<endl;
+ 
   //
   ////ИЗМЕНИТЬ ПУТЬ К НАБОРАМ ДАННЫХ
   //
   //
   //
   //
-  string path = "C:\\Repos\\12.csv";
+  string path = "УКАЖИТЕ СВОЙ ПУТЬ:)";
   //
   ////ИЗМЕНИТЬ ПУТЬ К НАБОРАМ ДАННЫХ
   //
@@ -73,15 +73,22 @@ int main() {
                                            intValues[static_cast<unsigned long>(rand() % 99 + 1)], nullptr,
                                            nullptr));
     }
+//// Заготовки для операции SPLIT
+    auto *cartesianTreeAA = new itis::CartesianTree;
+    auto *cartesianTreeBB = new itis::CartesianTree;
 
     ////создание деревьев
     auto *cartesianTree = new itis::CartesianTree;
 
 
-//    auto *cartesianTreeA = new itis::CartesianTree; Пустое дерево для операции split. Убрать слеши при использовании split!!!
-//    auto *cartesianTreeB = new itis::CartesianTree; Пустое дерево для операции split  Убрать слеши при использовании split!!!
+//// ЗАГОТОВКИ ДЛЯ ОПЕРАЦИИ MERGE
+    auto *cartesianTreeA = new itis::CartesianTree;
+    auto *cartesianTreeB = new itis::CartesianTree;
+ ////  Важно: Убрать комментирование со следующей строчки, чтобы разделеить дерево на два, для последующего применения операции MERGE
 
-    //// cartesianTree->split(cartesianTree->root_, rand() % (смотреть строку 63)+ 1, cartesianTreeA->root_, cartesianTreeB->root_);
+  ////   cartesianTree->split(cartesianTree->root_, rand() % (смотреть строку 63)+ 1, cartesianTreeA->root_, cartesianTreeB->root_);
+
+
     /// Разделение дерева на два для операции merge
 
 
