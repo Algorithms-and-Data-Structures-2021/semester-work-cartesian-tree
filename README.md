@@ -183,7 +183,7 @@ dataset/data/
 ![Картинка](https://i.gyazo.com/63dfc6ecbf1c5aaa9d86cbbf2f380ea1.png)
 * Запустить программу
 * Радоваться результату
-*[Видео-пример](https://drive.google.com/file/d/1xcYw8U_R_nMSXM6QIi22p3qM_aZTwpRy/view?usp=sharing)
+* [Видео-пример](https://drive.google.com/file/d/1xcYw8U_R_nMSXM6QIi22p3qM_aZTwpRy/view?usp=sharing)
 
 
 
