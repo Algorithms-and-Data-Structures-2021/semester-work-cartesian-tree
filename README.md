@@ -172,7 +172,7 @@ dataset/data/
 * Результат замера будет выведен в консоли
 ![Картинка](https://i.gyazo.com/d91e85032c4a2ccc019a95fa2b04cc23.png)
 
-*Рекомендую просмотреть видео, где показываются примеры замеров. [Ссылка](https://drive.google.com/file/d/1Az4Bh8KbwaUZWUPSnmVw2GybufD5nRzt/view?usp=sharing)
+* Рекомендую просмотреть видео, где показываются примеры замеров. [Ссылка](https://drive.google.com/file/d/1Az4Bh8KbwaUZWUPSnmVw2GybufD5nRzt/view?usp=sharing)
 ## Источники
 
 _Список использованных при реализации структуры данных источников._
