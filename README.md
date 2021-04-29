@@ -173,6 +173,20 @@ dataset/data/
 ![Картинка](https://i.gyazo.com/d91e85032c4a2ccc019a95fa2b04cc23.png)
 
 * Рекомендую просмотреть видео, где показываются примеры замеров. [Ссылка](https://drive.google.com/file/d/1Az4Bh8KbwaUZWUPSnmVw2GybufD5nRzt/view?usp=sharing)
+
+
+### Генерация наборов данных
+Вы можете скачать полный сгенерированный набор данных с нашего [гугл диска](https://drive.google.com/drive/folders/1A01XumxrWELLVbNP_Sq-Tcs-M1O4V5Ne) , либо сгенерировать его самостоятельно с помощью `DatasetGenerator.java`. 
+####Как сгенерировать  набор данных
+* Открыть `DatasetGenerator.java` в папке dataset
+* Поменять путь в поле `path` (P.S не стоит указывать тот путь, где может находится папка с названием `data`. P.S.S желательно поменять слеши(\\ или /) , которые соответствуют вашей ОС)
+![Картинка](https://i.gyazo.com/63dfc6ecbf1c5aaa9d86cbbf2f380ea1.png)
+* Запустить программу
+* Радоваться результату
+*[Видео-пример](https://drive.google.com/file/d/1xcYw8U_R_nMSXM6QIi22p3qM_aZTwpRy/view?usp=sharing)
+
+
+
 ## Источники
 
 _Список использованных при реализации структуры данных источников._
