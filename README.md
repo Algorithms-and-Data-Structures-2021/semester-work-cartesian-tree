@@ -96,7 +96,7 @@ mkdir -p build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=RelWithDebInfo && cmake --config RelWithDebInfo --build . 
 ```
 
-#### Генерация тестовых данных
+### Генерация тестовых данных
 
 _Тестовые данные хранятся в виде [.csv файлов](https://en.wikipedia.org/wiki/Comma-separated_values):_
 
@@ -143,7 +143,7 @@ dataset/data/
 
 Наборы данных должны находиться в папке семестровой работы на [Google Drive](https://drive.google.com/drive/folders/1TSjdTTbDApgpEV-YHxOiE-YiCl7uDN7s?usp=sharing). (Вес файла-  3ГБ)
 
-##### Список контрольных тестов
+### Список контрольных тестов
 
 | Название                  | Описание                                | Метрики         |
 | :---                      | ---                                     | :---            |
@@ -154,7 +154,6 @@ dataset/data/
 | `SEARCH`                  | Поиск вершины в дереве                  | _время_         |
 
 
-**Примечание**. Файл с метриками не обязателен, можете выводить данные в стандартный поток вывода (т.е. консоль).
 
 ## Источники
 
