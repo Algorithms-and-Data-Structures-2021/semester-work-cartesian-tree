@@ -66,6 +66,10 @@ namespace itis {
     // метод "erase" - операция удаление вершины из дерева
     void *erase(Node *t, int key);
 
+    ~CartesianTree();
+
+    void delete_tree (Node *node);
+
   };
 
 }

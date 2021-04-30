@@ -118,6 +118,20 @@ namespace itis {
   }
 
 
+  CartesianTree::~CartesianTree() {
+    delete_tree(root_);
+  }
+  void CartesianTree::delete_tree(Node *node) {
 
+    if(node != nullptr){
+      if (node->left != nullptr) delete_tree(node->left);
+      if (node->right != nullptr)delete_tree(node->right);
+      delete_tree(node);
+    }
+
+    size_ = 0;
+
+
+  }
 
 }

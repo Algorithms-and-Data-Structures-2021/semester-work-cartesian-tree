@@ -16,6 +16,20 @@ using namespace std;
 
 int main() {
 
+  auto *cartesianTree = new itis::CartesianTree();
+
+  cartesianTree->Insert(1,2);
+  cartesianTree->Insert(5,8);
+  cartesianTree->Insert(3,9);
+  cartesianTree->Insert(6,3);
+  cartesianTree->Insert(4,9);
+
+
+
+
+
+
+
   return 0;
 }
 
